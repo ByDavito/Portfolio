@@ -7,8 +7,8 @@ import { FaAngular, FaBootstrap, FaReact } from "react-icons/fa";
 const Home = () => {
   return (
     <div style={{ marginTop: "13vh" }} className="conteainer justify-center">
-    <div className="row">
-      <div className="col-9">
+    <div className="row justify-center align-middle">
+      <div className="col-md-8 col-sm-12">
       <CardFoto Foto="src\assets\img\poseCV.png" >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
         quod doloremque fugit repellat, eius aliquam voluptatibus dolorum sit
@@ -19,13 +19,18 @@ const Home = () => {
         labore earum, repellendus unde?
       </CardFoto>
       </div>
-      <div className="col-3 row justify-center ml-3">
-        <CardIconos text="React">
+      <div className="col-md-3 col-sm-12 row justify-center"> 
+        <div className="row justify-center">
+        <CardIconos text="React" clase="col-md-12 col-4">
           <FaReact />
         </CardIconos>
-        <CardIconos text="Bootstrap">
+        <CardIconos text="Bootstrap" clase="col-md-12 col-4">
           <FaBootstrap />
         </CardIconos>
+        <CardIconos text="Angular" clase="col-md-12 col-4">
+          <FaAngular />
+        </CardIconos>
+        </div>
       </div>
     </div>
   </div>

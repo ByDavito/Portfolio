@@ -14,9 +14,11 @@ const Boton = ({ children, ...props }) => {
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add("dark");
+      setRotate(!rotate);
       setIcon(<FaMoon />);
     } else {
       document.body.classList.remove("dark");
+      setRotate(!rotate);
       setIcon(<FaSun />);
     }
   }, [darkMode]);

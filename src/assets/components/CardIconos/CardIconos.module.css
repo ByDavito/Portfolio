@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   font-size: 3rem;
   border-radius: 50%;
   border: 1px solid var(--sombras-color);
@@ -27,6 +27,12 @@
   font-size: 4rem;
 }
 
+.contenedor:nth-child(3):hover .mi_CardIcono {
+  color: rgb(255, 0, 13);
+  filter: drop-shadow(0 0 10px rgb(194, 8, 18));
+  font-size: 4rem;
+}
+
 .contenedor:nth-child(1):hover .text {
   color: rgb(0, 195, 255);
   text-shadow: 0 0 15px rgb(0, 195, 255);
@@ -34,8 +40,14 @@
 }
 
 .contenedor:nth-child(2):hover .text {
-  color: rgb(207, 13, 233);
+  color: rgb(225, 0, 255);
   text-shadow: 0 0 15px rgb(144, 0, 132);
+  transform: translate(3.5rem, 0);
+}
+
+.contenedor:nth-child(3):hover .text {
+  color: rgb(194, 8, 18);
+  text-shadow: 0 0 15px rgb(194, 8, 18);
   transform: translate(3.5rem, 0);
 }
 
@@ -59,4 +71,37 @@
 
 .contenedor:hover .mi_CardIcono  {
     background-color: rgba(92, 88, 88, 0.713);
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    margin-top: .5rem;
+    
+  }
+  .mi_CardIcono {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.5rem;
+  }
+  .text {
+    font-size: 2rem;
+  }
+  .contenedor:nth-child(1):hover .text {
+    color: rgb(0, 195, 255);
+    text-shadow: 0 0 15px rgb(0, 195, 255);
+    transform: translate(-2.5rem, 4rem);
+  }
+  
+  .contenedor:nth-child(2):hover .text {
+    color: rgb(225, 0, 255);
+    text-shadow: 0 0 15px rgb(144, 0, 132);
+    transform: translate(-6.5rem, 4rem);
+  }
+  
+  .contenedor:nth-child(3):hover .text {
+    color: rgb(194, 8, 18);
+    text-shadow: 0 0 15px rgb(194, 8, 18);
+    transform: translate(-4.5rem, 4rem);
+  }
+  
 }

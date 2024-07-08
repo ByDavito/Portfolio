@@ -10,7 +10,17 @@
   box-shadow: 0 0 15px 1px var(--sombras-color);
   background-color: var(--card-color);
   backdrop-filter: blur(5px);
+}
+@media (max-width: 768px) {
+  .mi_Card{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
 
+  
 }
 
 .card_img{
@@ -20,12 +30,4 @@
   max-height: 300px;
   border-radius: 50%;
   box-shadow: 0 0 15px 1px var(--sombras-color);
-}
-
-.contenedor_botones{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  
 }

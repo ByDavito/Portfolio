@@ -6,6 +6,7 @@
   --card-color: rgba(196, 196, 196, 0.713);
   --sombras-color: rgba(0, 0, 0, 0.5);
   --text-color: rgba(0, 0, 0);
+  --sombras-color-hover: rgb(93, 185, 255);
 }
 body.dark{
   --navbar-color: rgba(0, 35, 57, 0.681);
@@ -15,6 +16,7 @@ body.dark{
   --card-color: rgba(119, 119, 119, 0.713);
   --sombras-color: rgba(255, 255, 255, 0.5);
   --text-color: rgb(255, 254, 254);
+  --sombras-color-hover: rgb(182, 219, 248);
 }
 
 
@@ -31,7 +33,7 @@ body{
 
 body::before{
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -56,5 +58,18 @@ main{
 
 .card-text{
   color: var(--text-color);
-  padding: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 768px) {
+  main{
+    padding: 0rem 3rem 9rem 3rem;
+  }
+  
 }

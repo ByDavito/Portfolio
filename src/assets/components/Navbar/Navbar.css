@@ -17,6 +17,7 @@
     transition: 1s;
     margin-bottom: 100px;
     position: fixed;
+    z-index: 10000000000;
 }
 
 .ul-navbar {
