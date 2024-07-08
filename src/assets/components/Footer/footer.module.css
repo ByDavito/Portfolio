@@ -1,5 +1,6 @@
 .footer{
     background-color: var(--navbar-color);
+    backdrop-filter: blur(20px);
     color: white;
     display: flex;
     justify-content: center;

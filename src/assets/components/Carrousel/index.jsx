@@ -1,14 +1,14 @@
 import React, { Children } from 'react';
 import { Image } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
+import styles from './Carrousel.module.css';
 
 
 
 
-
-const Carrousel = ({Children}) => {
+const Carrousel = ({ children }) => {
   return (
-    <div className='container'>
+    <div className={`${styles.container}`}>
         <Carousel>
           <Carousel.Item>
             <Image src="/assets/img/Fitlogg.png" />
