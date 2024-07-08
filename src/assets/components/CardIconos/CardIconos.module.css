@@ -1,0 +1,62 @@
+.mi_CardIcono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  width: 8rem;
+  font-size: 3rem;
+  border-radius: 50%;
+  border: 1px solid var(--sombras-color);
+  box-shadow: 0 0 15px 1px var(--sombras-color);
+  background-color: var(--card-color);
+  position: absolute;
+  z-index: 4;
+  transition: 0.4s;
+}
+
+.contenedor:nth-child(1):hover .mi_CardIcono {
+  color: aqua;
+  filter: drop-shadow(0 0 10px rgb(0, 195, 255)) ;
+  transform: rotate(180deg);
+  font-size: 4rem;
+}
+
+.contenedor:nth-child(2):hover .mi_CardIcono {
+  color: rgb(207, 13, 233);
+  filter: drop-shadow(0 0 10px rgb(144, 0, 132));
+  font-size: 4rem;
+}
+
+.contenedor:nth-child(1):hover .text {
+  color: rgb(0, 195, 255);
+  text-shadow: 0 0 15px rgb(0, 195, 255);
+  transform: translate(5rem, 0rem);
+}
+
+.contenedor:nth-child(2):hover .text {
+  color: rgb(207, 13, 233);
+  text-shadow: 0 0 15px rgb(144, 0, 132);
+  transform: translate(3.5rem, 0);
+}
+
+.text {
+  display: flex;
+  color: rgba(0, 195, 255, 0);
+  text-shadow: 0 0 15px rgba(0, 195, 255, 0);
+  font-size: 3rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-3.5rem, 0);
+  transition: all 0.4s;
+}
+.contenedor {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contenedor:hover .mi_CardIcono  {
+    background-color: rgba(92, 88, 88, 0.713);
+}

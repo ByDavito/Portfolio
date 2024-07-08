@@ -1,0 +1,14 @@
+.mi_Card{
+    height: 60vh ;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 15px;
+    border: 1px solid var(--sombras-color);
+    box-shadow: 0 0 15px 1px var(--sombras-color);
+    background-color: var(--card-color);
+    backdrop-filter: blur(5px);
+  
+  }

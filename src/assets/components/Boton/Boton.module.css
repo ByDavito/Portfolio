@@ -1,0 +1,24 @@
+.boton {
+    background-color: var(--boton-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.boton:hover {
+    background-color: var(--boton-color);
+    cursor: pointer;
+    box-shadow: 0 0 15px 1px  rgb(203, 202, 202);
+}
+.rotate{
+    transform: rotate(360deg);
+}
