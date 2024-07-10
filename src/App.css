@@ -45,15 +45,30 @@ body::before{
   transition: .4s;
 }
 
+
+
+
+::-webkit-scrollbar {
+  width: 4px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--boton-color); /* Color del thumb (barra de desplazamiento) */
+  border-radius: 10px;
+}
+
 main{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 1rem 10rem;
-  height: 100%;
+  overflow: hidden;
+  padding: 10.5vh 10rem;
+  height: auto;
   width: 100%;
 }
 
@@ -68,7 +83,7 @@ main{
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   main{
     padding: 0rem 3rem 9rem 3rem;
   }

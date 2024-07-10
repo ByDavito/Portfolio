@@ -42,7 +42,7 @@ const Vista = () => {
         </p>
     </CardFoto2>
     </div>
-    <h2 className="titulo">Proyectos</h2>
+    <h2 className="titulo">Mis Proyectos</h2>
     <div className="col-lg-12 col-sm-12">
       <Carrousel>
       </Carrousel>

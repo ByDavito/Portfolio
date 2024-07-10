@@ -14,10 +14,11 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1366px) {
     .card-text{
         justify-content: center;
         align-items: center;
+        font-size: 1rem;
     }
     
 }

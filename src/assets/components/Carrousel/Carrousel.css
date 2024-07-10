@@ -1,22 +1,22 @@
-ul {
+.ul {
   list-style: none;
   white-space: nowrap;
   display: flex; /* Cambia a flex para alinear horizontalmente */
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 li {
   flex: 0 0 auto; /* Para que cada <li> no se ajuste */
   display: inline-block; /* Asegura que los items se alineen horizontalmente */
   margin-right: 10px; /* Espacio entre imágenes, ajustalo como quieras */
+  height: auto;
 }
 
 li img {
-  margin-top: -16px;
   background-size: cover;
   width: 80vh;
-  height: 100%;
 }
 
 .responsiveImg {
@@ -88,8 +88,16 @@ li img {
 }
 
 div.active {
-  background: #209bd4;
+  background: #f8dc06;
   width: 15px;
   height: 15px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    height: 30vh;
+    width: 100%;
+  }
+  
 }

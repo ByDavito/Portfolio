@@ -51,3 +51,19 @@
 
   
 }
+
+@media (max-width: 1366px) {
+  .mi_Card{
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  .mi_Card:nth-child(even){
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+  }
+  
+}
