@@ -19,7 +19,12 @@
     background-color: var(--boton-color);
     cursor: pointer;
     box-shadow: 0 0 15px 1px  rgb(203, 202, 202);
+    transform: rotate(40deg);
 }
 .rotate {
     transform: rotate(360deg);
+}
+
+.rotate:hover {
+    transform: rotate(320deg);
 }

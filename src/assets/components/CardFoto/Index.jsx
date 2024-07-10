@@ -7,9 +7,9 @@ const CardFoto = ({ children, Foto, ...props }) => {
     <div className={`${styles.mi_Card} ${props.clase}`}>
       <img src={Foto} className={`${styles.card_img}`} alt="..." />
       <div className={`card-body d-flex justify-around h-full`}>
-        <p className="card-text">
+      <div className="card-text ">
           {children}
-        </p>
+        </div>
       </div>
     </div>
   );

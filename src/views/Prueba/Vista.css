@@ -1,0 +1,7 @@
+.titulo{
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 15px var(--sombras-color);
+    margin-bottom: 20px;
+    text-align: center;
+}

@@ -28,8 +28,8 @@
 }
 
 .contenedor:nth-child(3):hover .mi_CardIcono {
-  color: rgb(255, 0, 13);
-  filter: drop-shadow(0 0 10px rgb(194, 8, 18));
+  color: rgb(45, 194, 8);
+  filter: drop-shadow(0 0 10px rgb(45, 194, 8));
   font-size: 4rem;
 }
 
@@ -42,12 +42,12 @@
 .contenedor:nth-child(2):hover .text {
   color: rgb(225, 0, 255);
   text-shadow: 0 0 15px rgb(144, 0, 132);
-  transform: translate(3.5rem, 0);
+  transform: translate(2.35rem, 0);
 }
 
 .contenedor:nth-child(3):hover .text {
-  color: rgb(194, 8, 18);
-  text-shadow: 0 0 15px rgb(194, 8, 18);
+  color: rgb(45, 194, 8);
+  text-shadow: 0 0 15px rgb(45, 194, 8);
   transform: translate(3.5rem, 0);
 }
 
@@ -67,6 +67,12 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  transition: 0.4s;
+}
+
+.contenedor:hover {
+  cursor: pointer;
+  transform: translate(1rem, 0);
 }
 
 .contenedor:hover .mi_CardIcono  {
@@ -77,6 +83,10 @@
   .contenedor {
     margin-top: .5rem;
     
+  }
+  .contenedor:hover {
+    cursor: pointer;
+    transform: translate(0, 1rem);
   }
   .mi_CardIcono {
     width: 5rem;

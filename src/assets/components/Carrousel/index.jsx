@@ -1,41 +1,78 @@
-import React, { Children } from 'react';
+import React, { Children, useEffect, useRef, useState } from 'react';
 import { Image } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
-import styles from './Carrousel.module.css';
+import  './Carrousel.css';
+import {data} from './data.js';
 
 
 
 
-const Carrousel = ({ children }) => {
+const Carrousel = () => {
+  const listRef = useRef();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+
+  useEffect(() => {
+    const listNode = listRef.current;
+    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
+
+    if (imgNode) {
+      imgNode.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+      });
+    }
+
+  }, [currentIndex]);
+
+
+  const scrollToImage = (direction) => {
+    if (direction === 'prev') {
+      setCurrentIndex(curr => {
+        const isFirstSlide = currentIndex === 0;
+        return isFirstSlide ? 0 : curr - 1;
+      })
+    } else {
+      const isLastSlide = currentIndex === data.length - 1;
+      if (!isLastSlide) {
+        setCurrentIndex(curr => curr + 1);
+      }
+    }
+  }
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  }
+
   return (
-    <div className={`${styles.container}`}>
-        <Carousel>
-          <Carousel.Item>
-            <Image src="/assets/img/Fitlogg.png" />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+    <div className="main-container">
+      <div className="slider-container">
+        <div className='leftArrow' onClick={() => scrollToImage('prev')}>&#10092;</div>
+        <div className='rightArrow' onClick={() => scrollToImage('next')}>&#10093;</div>
+        <div className="container-images">
+          <ul ref={listRef}  className='ul'>
+            {
+              data.map((item) => {
+                return <li key={item.id} className='responsiveImg'>
+                  <img src={item.imgUrl} className='responsiveImg' />
+                </li>
+              })
+            }
+          </ul>
         </div>
-      );
+        <div className="dots-container">
+          {
+            data.map((_, idx) => (
+              <div key={idx}
+                className={`dot-container-item ${idx === currentIndex ? "active" : ""}`}
+                onClick={() => goToSlide(idx)}>
+                &#9865;
+              </div>))
+          }
+        </div>
+      </div>
+    </div >
+  )
 }
 
 export default Carrousel
