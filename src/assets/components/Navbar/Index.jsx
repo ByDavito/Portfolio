@@ -11,7 +11,7 @@ const Navbar = () => {
     const navegate = useNavigate()
   return (
     <nav className='navbar '>
-        <h1>Navbar</h1>
+        <h1>Portfolio</h1>
     
         <ul className='ul-navbar'>
             <li> <Link to='/'>Home</Link> <span></span></li>

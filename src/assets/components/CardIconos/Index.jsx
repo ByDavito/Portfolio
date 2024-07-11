@@ -14,7 +14,8 @@ const CardIconos = ({children, color, ...props}) => {
 
   const hoverStyle = {
     color: color,
-    textShadow: `0 0 15px ${color}`,
+    textShadow: `0 0 25px ${color}`,
+    filter: `drop-shadow(${color})`
   };
 
   return (

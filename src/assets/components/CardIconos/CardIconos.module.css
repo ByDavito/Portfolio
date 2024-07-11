@@ -14,39 +14,21 @@
   transition: 0.4s;
 }
 
-.contenedor:nth-child(1):hover .mi_CardIcono {
+.contenedor:hover .mi_CardIcono {
   
   font-size: 4rem;
 }
 
-.contenedor:nth-child(2):hover .mi_CardIcono {
-  
-  font-size: 4rem;
-}
-
-.contenedor:nth-child(3):hover .mi_CardIcono {
- 
-  font-size: 4rem;
-}
-
-.contenedor:nth-child(1):hover .text {
-  
-  transform: translate(5rem, 0rem);
-}
-
-.contenedor:nth-child(2):hover .text {
-  
-  transform: translate(2.35rem, 0);
-}
-
-.contenedor:nth-child(3):hover .text {
-  
-  transform: translate(3.5rem, 0);
+.contenedor:hover .text {
+  transform: translate(0rem, 5rem);
 }
 
 .text {
   display: flex;
   color: rgba(255, 232, 23, 0);
+  
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
   text-shadow: 0 0 15px rgba(0, 195, 255, 0);
   font-size: 3rem;
   position: relative;
@@ -65,7 +47,7 @@
 
 .contenedor:hover {
   cursor: pointer;
-  transform: translate(1rem, 0);
+  transform: translate(0rem, -0.5rem);
 }
 
 .contenedor:hover .mi_CardIcono  {
@@ -89,21 +71,11 @@
   .text {
     font-size: 2rem;
   }
-  .contenedor:nth-child(1):hover .text {
+  .contenedor:hover .text {
     
     transform: translate(-2.5rem, 4rem);
   }
-  
-  .contenedor:nth-child(2):hover .text {
-    
-    transform: translate(-6.5rem, 4rem);
-  }
-  
-  .contenedor:nth-child(3):hover .text {
-    
-    transform: translate(-4.5rem, 4rem);
-  }
-  
+
 }
 
 @media screen and (max-width: 1366px) {
@@ -113,22 +85,11 @@
   }
   .contenedor:hover {
     cursor: pointer;
-    transform: translate(-0.5rem, 0rem);
+    
   }
 
-  .contenedor:nth-child(1):hover .text {
+  .contenedor:hover .text {
     
-    transform: translate(5rem, 0rem);
+    transform: translate(-3rem, 5rem);
   }
-  
-  .contenedor:nth-child(2):hover .text {
-    
-    transform: translate(0.95rem, 0);
-  }
-  
-  .contenedor:nth-child(3):hover .text {
-  
-    transform: translate(2.5rem, 0);
-  }
-  
 }

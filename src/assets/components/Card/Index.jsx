@@ -5,9 +5,9 @@ const CardTxt = ({ children,  ...props }) => {
     return (
       <div className={`${styles.mi_Card} ${props.clase}`}>
         <div className={`card-body d-flex justify-around h-full`}>
-          <p className="card-text">
+          <div className="card-text">
             {children}
-          </p>
+          </div>
         </div>
       </div>
     );

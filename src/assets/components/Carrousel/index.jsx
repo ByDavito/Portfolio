@@ -14,7 +14,7 @@ const Carrousel = () => {
 
   useEffect(() => {
     const listNode = listRef.current;
-    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
+    const imgNode = listNode.querySelectorAll("li > a > img")[currentIndex];
 
     if (imgNode) {
       imgNode.scrollIntoView({
@@ -53,8 +53,10 @@ const Carrousel = () => {
           <ul ref={listRef}  className='ul'>
             {
               data.map((item) => {
-                return <li key={item.id} className='responsiveImg'>
+                return <li key={item.id}  className='responsiveImg'>
+                  <a href={item.Url}>
                   <img src={item.imgUrl} className='responsiveImg' />
+                  </a>
                 </li>
               })
             }

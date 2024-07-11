@@ -1,7 +1,7 @@
 :root{
   --navbar-color: rgba(0, 77, 128, 0.768);
   --color-text-navbar: rgba(183, 180, 180, 0.768);
-  --body-color: rgba(121, 197, 252, 0.47);
+  --body-color: rgba(98, 151, 189, 0.47);
   --boton-color: rgba(9, 136, 190, 0.753);
   --card-color: rgba(196, 196, 196, 0.713);
   --sombras-color: rgba(0, 0, 0, 0.5);
@@ -67,7 +67,7 @@ main{
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  padding: 10.5vh 10rem;
+  padding: 0 10rem 21vh 10rem;
   height: auto;
   width: 100%;
 }

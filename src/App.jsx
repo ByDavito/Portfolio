@@ -8,20 +8,20 @@ import NotFound from "./views/NotFound";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Dashboard from "./assets/components/Dashboard/Index";
 import  './assets/img/poseCV.png';
+import 'animate.css';
+import { request } from "./utils/request";
+
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [icon, setIcon] = useState(<FaSun />);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark");
-      setIcon(<FaMoon />);
-    } else {
-      document.body.classList.remove("dark");
-      setIcon(<FaSun />);
+  const devolucion = async() => {
+    try {
+      const response = await request();
+      console.log(response.data);
+    } catch (error) {
+      console.log('mal pibe', error.response ? error.response.data : error.message);
     }
-  }, [darkMode]);
+  }
+  devolucion();
   return (
     <>
       <BrowserRouter>
