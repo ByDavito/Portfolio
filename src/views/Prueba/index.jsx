@@ -1,9 +1,5 @@
 import React from "react";
 import "../Prueba/Vista.css";
-import CardIconos from "../../assets/components/CardIconos/Index";
-import { FaAngular, FaBootstrap, FaReact } from "react-icons/fa";
-import CardTxt from "../../assets/components/Card/Index";
-import CardFoto from "../../assets/components/CardFoto/Index";
 import CardFoto2 from "../../assets/components/CardFoto2";
 import Carrousel from "../../assets/components/Carrousel";
 

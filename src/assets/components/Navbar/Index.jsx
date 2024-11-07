@@ -2,9 +2,6 @@ import React from 'react'
 import './Navbar.css';
 import { BrowserRouter, Link, Route, Routes, useNavigate } from 'react-router-dom';
 import { Switch } from '@mui/material';
-import Home from '../../../views/home';
-import Vista from '../../../views/Prueba';
-import NotFound from '../../../views/NotFound';
 import Boton from '../Boton';
 
 const Navbar = () => {

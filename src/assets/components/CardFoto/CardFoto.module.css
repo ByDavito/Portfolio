@@ -1,17 +1,42 @@
+.posicion:nth-child(2), .posicion:nth-child(3){
+  position: relative;
+  top: -40px;
+
+}
+
 .mi_Card{
-  height: auto ;
-  max-height: 600px;
-  padding: 10px;
+  height: 50vh; 
   display: flex;
+  width: 100%;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  align-items: end;
   border-radius: 15px;
   border: 1px solid var(--sombras-color);
-  box-shadow: 0 0 15px 1px var(--sombras-color);
-  background-color: var(--card-color);
-  backdrop-filter: blur(5px);
+  opacity: 0.7;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s;
 }
+
+.mi_Card img{
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  transition: all 0.4s;
+  position: absolute;
+  scale: 1.2;
+  object-fit: cover;
+  animation: paneo 20s infinite;
+}
+
+.mi_Card:hover img{
+  opacity: 1;
+  scale: 1.0;
+  animation-play-state: paused;
+}
+
+
 
 .mi_Card h2{
   color: #fff;
@@ -19,34 +44,41 @@
   font-size: 2.5rem;
 }
 
-.mi_Card hr{
-    width: 33%;
-    height: 5px;
-    background-color: var(--text-color);
-    border-radius: 5px;
-    margin: 10px 0 30px 0;
-    transition: all 0.2s;
+.card_body{
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-color);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s;
 }
 
-
-.card_img{
-  width: 80%;
-  max-width: 300px;
-  height: 80%;
-  max-height: 300px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px 1px var(--sombras-color);
+.mi_Card:hover .card_body{
+  background-color: transparent;
+  backdrop-filter: blur(0px);
 }
+.mi_Card:hover{
+  opacity: 1;
+  scale: 1.16;
+}
+
 
 
 @media (max-width: 768px) {
   .mi_Card{
     width: 100%;
-    height: auto;
     max-height: none;
     flex-direction: column;
     margin-top: 0px;
     margin-bottom: 50px;
+  }
+
+  .posicion:nth-child(2), .posicion:nth-child(3){
+    top: 0px;
   }
 
   
@@ -54,16 +86,27 @@
 
 @media (max-width: 1366px) {
   .mi_Card{
-    padding: 20px;
     margin-top: 0px;
     margin-bottom: 50px;
   }
 
   .mi_Card:nth-child(even){
-    padding: 20px;
     margin-top: 0px;
     margin-bottom: 50px;
     flex-direction: row-reverse;
   }
   
 }
+
+@keyframes paneo {
+  0% {
+    object-position: left;
+  }
+  50% {
+    object-position: right;
+  }
+  100% {
+    object-position: left;
+  }
+}
+
