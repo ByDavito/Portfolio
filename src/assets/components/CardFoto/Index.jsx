@@ -14,7 +14,6 @@ const CardFoto = ({ children, Foto, Url, ...props }) => {
 
     if (animacion) {
       card.addEventListener("mouseover", () => {
-        animacion.currentTime = 10;
         animacion.playbackRate = 0;
       });
 

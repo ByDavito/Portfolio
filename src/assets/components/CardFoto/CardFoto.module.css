@@ -33,7 +33,6 @@
 .mi_Card:hover img{
   opacity: 1;
   scale: 1.0;
-  animation-play-state: paused;
 }
 
 
@@ -64,6 +63,7 @@
 .mi_Card:hover{
   opacity: 1;
   scale: 1.16;
+  border-radius: 55px;
 }
 
 
