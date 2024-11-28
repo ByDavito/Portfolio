@@ -28,7 +28,7 @@
     gap: 1rem;
 }
 
-nav ul li{
+.navbar ul li{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,14 +36,14 @@ nav ul li{
     list-style: none;
 }
 
-nav ul li span{
+.navbar ul li span{
     width: 10px;
     height: 2px;
     transition: 0.3s;
     background-color: white;
 }
 
-nav ul li:hover span {
+.navbar ul li:hover span {
     width: 20px;
     border-radius: 2px;
     background-color: rgb(96, 186, 228);
@@ -51,16 +51,16 @@ nav ul li:hover span {
     
 }
 
-a {
+.navbar a {
     transition: 0.3s;
 }
 
-a:active {
+.navbar a:active {
     color: rgb(63, 255, 134);
     text-shadow: 0 0 5px rgb(63, 255, 134);
     transition: 0.1s;
 }
-li:hover a {
+.navbar li:hover a {
     scale: 1.1;
     text-shadow: 0 0 5px;
     

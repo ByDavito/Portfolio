@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import Home from "./views/home";
 import Vista from "./views/Prueba";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound from "./views/NotFound";
-import { FaMoon, FaSun } from "react-icons/fa";
 import Dashboard from "./assets/components/Dashboard/Index";
 import  './assets/img/poseCV.png';
 import 'animate.css';
 import { request } from "./utils/request";
+import SobreMi from "./views/SobreMi";
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/Vista" element={<Vista />} />
             <Route path="/" element={<Home />} />
+            <Route path="/SobreMi" element={<SobreMi />} />
           </Route>
         </Routes>
       </BrowserRouter>

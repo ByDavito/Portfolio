@@ -27,7 +27,7 @@
   position: absolute;
   scale: 1.2;
   object-fit: cover;
-  animation: paneo 20s infinite;
+  animation: paneo 5s infinite ease-in-out alternate;
 }
 
 .mi_Card:hover img{
@@ -63,7 +63,6 @@
 .mi_Card:hover{
   opacity: 1;
   scale: 1.16;
-  border-radius: 55px;
 }
 
 
@@ -102,11 +101,8 @@
   0% {
     object-position: left;
   }
-  50% {
-    object-position: right;
-  }
   100% {
-    object-position: left;
+    object-position: right;
   }
 }
 

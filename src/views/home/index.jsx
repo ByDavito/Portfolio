@@ -29,7 +29,7 @@ const Home = () => {
         <h2 className="titulo">Racca David</h2>
         <div className="col-xl-12 row mt-16">
           <CardFoto Foto="src/assets/img/ProyectARG.png">Tecnologias</CardFoto>
-          <CardFoto Foto="src/assets/img/poseCV.png">Sobre mi</CardFoto>
+          <CardFoto Foto="src/assets/img/poseCV.png" Url={"/SobreMi"}>Sobre mi</CardFoto>
           <CardFoto Foto="src/assets/img/Trabajos.png"  Url={"/Vista"}>Proyectos y experiencias</CardFoto>
           <CardFoto Foto="src/assets/img/fitlogg.png">Contacto y CV</CardFoto>
       </div>
