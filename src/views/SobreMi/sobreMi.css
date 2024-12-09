@@ -45,12 +45,13 @@
 .main-card span{
     background-color: aliceblue;
     width: 0;
+    height: 0;
     position: absolute;
     border-radius: 15px;
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
-    transition: .3s all;
+    transition:  width .3s, height .3s;
 }
 
 .main-card li:hover span{
@@ -99,8 +100,12 @@
     height: 5px;
     background-color: var(--text-color);
     border-radius: 5px;
-    margin: 10px auto 30px auto;
+    margin: 0 auto 0 auto;
     transition: all 0.2s;
+}
+
+.info-container > hr{
+    width: 90%;
 }
 
 .info-container p{

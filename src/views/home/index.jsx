@@ -21,13 +21,12 @@ const Home = () => {
 
   return (
     <div
-      style={{ marginTop: "13vh" }}
-      className="conteainer justify-center content w-9/12"
+      className="conteainer justify-center content w-9/12 mt-20"
     >
       <div className="row justify-center align-middle ">
         <h1 className="titulo">Desarrollador Fullstack</h1>
         <h2 className="titulo">Racca David</h2>
-        <div className="col-xl-12 row mt-16">
+        <div className="col-xl-12 row mt-16 pb-24">
           <CardFoto Foto="src/assets/img/ProyectARG.png">Tecnologias</CardFoto>
           <CardFoto Foto="src/assets/img/poseCV.png" Url={"/SobreMi"}>Sobre mi</CardFoto>
           <CardFoto Foto="src/assets/img/Trabajos.png"  Url={"/Vista"}>Proyectos y experiencias</CardFoto>

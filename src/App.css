@@ -1,8 +1,8 @@
 :root{
-  --navbar-color: rgba(222,222,222,1);
+  --navbar-color: rgba(222, 222, 222, 0.726);
   --footer-color: linear-gradient(0deg, rgba(222, 222, 222, 0.726) 0%, rgba(0,212,255,0) 38%);
   --color-text-navbar: rgba(183, 180, 180, 0.768);
-  --body-color: linear-gradient(180deg, rgba(222,222,222,1) 21%, rgba(0,212,255,0.258140756302521) 100%);
+  --body-color: claro .4s forwards;
   --boton-color: rgba(169, 170, 170, 0.753);
   --card-color: rgba(196, 196, 196, 0.713);
   --sombras-color: rgba(0, 0, 0, 0.5);
@@ -11,9 +11,9 @@
   --sombras-color-hover: rgb(93, 185, 255);
 }
 body.dark{
-  --navbar-color: rgba(0, 0, 0, 0.61);
+  --navbar-color: rgba(0,0,0,0.8911939775910365);
   --color-text-navbar: rgba(246, 246, 246, 0.768);
-  --body-color: linear-gradient(180deg, rgba(0,0,0,0.8911939775910365) 24%, rgba(0, 48, 70, 0.911) 100%);
+  --body-color: oscuro .4s forwards;
   --boton-color: rgb(0, 34, 48);
   --card-color: rgba(119, 119, 119, 0.713);
   --sombras-color: rgba(255, 255, 255, 0.5);
@@ -41,8 +41,10 @@ body::before{
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--body-color);
+  background: linear-gradient(180deg, rgba(222,222,222,1) 10.5%, rgba(0,212,255,0.258140756302521) 50%, rgba(0,0,0,0.8911939775910365) 52%, rgba(0,0,0,0.8911939775910365) 62%, rgba(0, 48, 70, 0.911) 100%);;
   backdrop-filter: blur(3px);
+  background-size: 200vh 100vw;
+  animation: var(--body-color);
   z-index: -1;
   transition: .4s;
 }
@@ -90,4 +92,22 @@ main{
     padding: 0rem 3rem 9rem 3rem;
   }
   
+}
+
+@keyframes claro {
+  from{
+    background-position: 0 100%;
+  }
+  to{
+    background-position: 0 0;
+  }
+}
+
+@keyframes oscuro {
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: 0 100%;
+  }
 }
