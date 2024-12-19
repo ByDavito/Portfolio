@@ -9,6 +9,7 @@
   --text-color: rgba(0, 0, 0);
   --tittle-color: rgb(255, 255, 255);
   --sombras-color-hover: rgb(93, 185, 255);
+  --github-color: #181717;
 }
 body.dark{
   --navbar-color: rgba(0,0,0,0.8911939775910365);
@@ -19,6 +20,7 @@ body.dark{
   --sombras-color: rgba(255, 255, 255, 0.5);
   --text-color: rgb(255, 254, 254);
   --sombras-color-hover: rgb(182, 219, 248);
+  --github-color: rgb(231, 231, 231);
 }
 
 

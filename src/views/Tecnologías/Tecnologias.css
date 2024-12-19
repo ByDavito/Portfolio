@@ -1,0 +1,39 @@
+.titulo{
+    font-size: 3rem;
+    color: var(--tittle-color);
+    text-shadow: 0 0 15px var(--sombras-color);
+    text-align: center;
+    transition: .2s;
+}
+
+@keyframes rotate {
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  .rotate{
+    animation: expand 1s infinite alternate ease-in-out,
+               rotate 15s infinite linear;
+    
+  }
+  .rotate:hover{
+    animation-play-state: running;
+    
+  }
+  
+  @keyframes expand {
+    to{
+      font-size: 4rem;
+
+    }
+  }
+
+  .expand{
+    animation: expand 1s infinite alternate ease-in-out;
+    animation-play-state: paused;
+  }
+
+  .expand:hover{
+    animation-play-state: running;
+  }
+  

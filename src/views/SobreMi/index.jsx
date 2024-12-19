@@ -64,9 +64,9 @@ const SobreMi = () => {
                     Disfruto del proceso de resolver problemas y de la constante búsqueda de soluciones innovadoras. </p>
                     
                     <p>Sé que aún tengo mucho por aprender, pero siempre estoy abierto a nuevos desafíos, tecnologías y formas de trabajar en equipo. 
-                    Mi objetivo es seguir creciendo como profesional, contribuyendo con mi conocimiento y pasión en cada proyecto que desarrollo.</p>`
+                    Mi objetivo es seguir creciendo como profesional, contribuyendo con mi conocimiento y pasión en cada proyecto que desarrollo.</p>`,
     },
-    
+
     {
       titulo: "Quién soy",
       descripcion: `<p>Mi nombre es <b>David Ariel Racca</b>, un programador fullstack junior apasionado por la tecnología desde chico. 
@@ -82,14 +82,27 @@ const SobreMi = () => {
   const [contenidoActual, setContenidoActual] = useState(contenido[3]);
 
   const cambioContenido = (index) => {
-    setContenidoActual(contenido[index]);
+    document.querySelector(".blur").style.display = "block";
+    document.querySelector(".blur").style.animation = "blur .2s forwards";
+    
+    setTimeout(() => {
+      setContenidoActual(contenido[index]);
+      document.querySelector(".blur").style.animation = "focus .2s ";
+      setTimeout(() => {
+        document.querySelector(".blur").style.display = "none";
+      }, 200)
+    }, 200);
   };
 
   return (
     <div className="grid grid-cols-5 gap-4 w-full h-full mt-44">
+      
       <div className="main-card col-span-1">
         <img src="src/assets/img/poseCV.png" alt="" />
         <ul>
+          <li onClick={() => cambioContenido(3)}>
+            Quién soy <span></span>
+          </li>
           <li onClick={() => cambioContenido(0)}>
             Experiencias <span></span>
           </li>
@@ -99,13 +112,11 @@ const SobreMi = () => {
           <li onClick={() => cambioContenido(2)}>
             Motivaciones <span></span>
           </li>
-          <li onClick={() => cambioContenido(3)}>
-            Quién soy <span></span>
-          </li>
         </ul>
       </div>
 
       <div className="info-container col-span-4">
+      <div className="blur"></div>
         <h3>{contenidoActual.titulo}</h3>
         <hr />
         <div

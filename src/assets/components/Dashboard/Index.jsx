@@ -7,7 +7,7 @@ const Dashboard = ({ children }) => {
   return (
     <>
         <Navbar/>
-        <main>
+        <main className="justify-center">
         <Outlet />
         </main>
         <Footer />

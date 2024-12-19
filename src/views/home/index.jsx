@@ -27,10 +27,10 @@ const Home = () => {
         <h1 className="titulo">Desarrollador Fullstack</h1>
         <h2 className="titulo">Racca David</h2>
         <div className="col-xl-12 row mt-16 pb-24">
-          <CardFoto Foto="src/assets/img/ProyectARG.png">Tecnologias</CardFoto>
+          <CardFoto Foto="src/assets/img/ProyectARG.png" Url={"/Tecnologías"}>Tecnologias</CardFoto>
           <CardFoto Foto="src/assets/img/poseCV.png" Url={"/SobreMi"}>Sobre mi</CardFoto>
           <CardFoto Foto="src/assets/img/Trabajos.png"  Url={"/Vista"}>Proyectos y experiencias</CardFoto>
-          <CardFoto Foto="src/assets/img/fitlogg.png">Contacto y CV</CardFoto>
+          <CardFoto Foto="src/assets/img/fitlogg.png" Url={"/Contacto"}>Contacto y CV</CardFoto>
       </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import  './assets/img/poseCV.png';
 import 'animate.css';
 import { request } from "./utils/request";
 import SobreMi from "./views/SobreMi";
+import Tecnologias from './views/Tecnologías';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/Vista" element={<Vista />} />
             <Route path="/" element={<Home />} />
             <Route path="/SobreMi" element={<SobreMi />} />
+            <Route path="/Tecnologías" element={<Tecnologias />} />
           </Route>
         </Routes>
       </BrowserRouter>

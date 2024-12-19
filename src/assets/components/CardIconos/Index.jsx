@@ -4,6 +4,8 @@ import styles from './CardIconos.module.css'; // Asegurate de importar tus estil
 const CardIconos = ({children, color, ...props}) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -15,8 +17,10 @@ const CardIconos = ({children, color, ...props}) => {
   const hoverStyle = {
     color: color,
     textShadow: `0 0 25px ${color}`,
-    filter: `drop-shadow(${color})`
+    filter: `drop-shadow(${color})`,
+    
   };
+  
 
   return (
     <div 
@@ -25,7 +29,7 @@ const CardIconos = ({children, color, ...props}) => {
       onMouseLeave={handleMouseLeave}
     >
       <div 
-        className={`${styles.mi_CardIcono}`}
+        className={`${styles.mi_CardIcono} ${props.animacion}`}
         style={isHovered ? hoverStyle : {}}
       >
         {children}
